@@ -41,7 +41,7 @@ public class DTestReport implements IReporter {
 	
 	private String folderPath = System.getProperty("user.dir") + File.separator + "report";
 	
-	private String path = createReportFolder(folderPath) + File.separator + getReportFileName() + "_report.html";
+	private String path = createReportFolder(folderPath) + File.separator  + "index.html";
 	
 	private String templatePath = System.getProperty("user.dir") + File.separator + "config" + File.separator  + "template";
 	
