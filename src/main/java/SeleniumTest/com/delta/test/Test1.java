@@ -22,7 +22,7 @@ public class Test1 {
 	@Test(description="this is a test")
 	public void test1() {
 		driver.get("http://www.baidu.com");
-		System.out.println(1/0);
+		Assert.assertEquals(1, 1);
 	}
 	
 	
