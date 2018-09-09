@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--status属性用于设置log4j2自身内部的信息输出-->
+<configuration status="error" monitorInterval="30">
+	<appenders>
+		<!--定义输出控制台的配置-->
+		<Console name="Console" target="SYSTEM_OUT">
+			<!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+			<ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36}.%M(%L) - %msg%xEx%n"/>
+		</Console>
+		<!--打印出所有信息，append属性决定是否每次运行程序会自动清空-->
+		<File name="log" fileName="log/test.log" append="false">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36}.%M(%L) - %msg%xEx%n"/>
+		</File> 
+		<!-- 打印所有的信息，每次大小超过size，会自动压缩存档-->
+		<RollingFile name="RollingFile" fileName="logs/adc.log"
+				 filePattern="log/$${date:yyyy-MM}/adc-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout pattern="%d{yyyy-MM-dd 'at' HH:mm:ss z} %-5level %class{36}.%M(%L) - %msg%xEx%n"/>
+			<SizeBasedTriggeringPolicy size="10MB"/>
+		</RollingFile>
+	</appenders>
+	<loggers>
+		<!--建立默认root的logger-->
+		<root level="trace">
+			<appender-ref ref="RollingFile"/>
+			<appender-ref ref="Console"/>
+		</root> 
+	</loggers>
+</configuration>

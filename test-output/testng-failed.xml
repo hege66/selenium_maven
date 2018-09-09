@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
+  <listeners>
+    <listener class-name="SeleniumTest.com.delta.test.TakeScreenshotListener"/>
+    <listener class-name="SeleniumTest.com.delta.test.DTestReport"/>
+  </listeners>
+  <test name="Test(failed)" parallel="none">
+    <classes>
+      <class name="SeleniumTest.com.delta.test.Test1">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- SeleniumTest.com.delta.test.Test1 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
