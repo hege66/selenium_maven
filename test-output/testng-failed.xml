@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
-  <listeners>
-    <listener class-name="SeleniumTest.com.delta.test.TakeScreenshotListener"/>
-    <listener class-name="SeleniumTest.com.delta.test.DTestReport"/>
-  </listeners>
-  <test name="Test(failed)" parallel="none">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="SeleniumTest.com.delta.test.Test1">
+      <class name="SeleniumTest.com.delta.test.TestExecute">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="test1"/>
+          <include name="testExeuteJS"/>
         </methods>
-      </class> <!-- SeleniumTest.com.delta.test.Test1 -->
+      </class> <!-- SeleniumTest.com.delta.test.TestExecute -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

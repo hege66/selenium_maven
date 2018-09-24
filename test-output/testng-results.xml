@@ -2,23 +2,41 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="9321" started-at="2018-09-09T09:18:04Z" finished-at="2018-09-09T09:18:14Z">
+  <suite name="Default suite" duration-ms="10320" started-at="2018-09-10T13:35:43Z" finished-at="2018-09-10T13:35:53Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="9321" started-at="2018-09-09T09:18:04Z" finished-at="2018-09-09T09:18:14Z">
-      <class name="SeleniumTest.com.delta.test.Test1">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:SeleniumTest.com.delta.test.Test1@1e643faf]" name="beforeMethod" is-config="true" duration-ms="7339" started-at="2018-09-09T17:18:04Z" finished-at="2018-09-09T17:18:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="test1()[pri:0, instance:SeleniumTest.com.delta.test.Test1@1e643faf]" name="test1" duration-ms="1878" started-at="2018-09-09T17:18:12Z" description="this is a test" finished-at="2018-09-09T17:18:14Z">
-          <exception class="java.lang.ArithmeticException">
+    <test name="Default test" duration-ms="10320" started-at="2018-09-10T13:35:43Z" finished-at="2018-09-10T13:35:53Z">
+      <class name="SeleniumTest.com.delta.test.TestExecute">
+        <test-method status="FAIL" signature="testExeuteJS()[pri:0, instance:SeleniumTest.com.delta.test.TestExecute@35bbe5e8]" name="testExeuteJS" duration-ms="10292" started-at="2018-09-10T21:35:43Z" finished-at="2018-09-10T21:35:53Z">
+          <exception class="org.openqa.selenium.JavascriptException">
             <message>
-              <![CDATA[/ by zero]]>
+              <![CDATA[TypeError: document.getElementsByClassName(...)[0] is undefined
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'HD1AB2KY78F1DTO', ip: '169.254.59.224', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 13300, moz:profile: C:\Users\Administrator\AppD..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 25839104-94f4-4a2e-9e59-286e7c8fa22d]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.ArithmeticException: / by zero
-	at SeleniumTest.com.delta.test.Test1.test1(Test1.java:25)
+              <![CDATA[org.openqa.selenium.JavascriptException: TypeError: document.getElementsByClassName(...)[0] is undefined
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'HD1AB2KY78F1DTO', ip: '169.254.59.224', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 13300, moz:profile: C:\Users\Administrator\AppD..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 25839104-94f4-4a2e-9e59-286e7c8fa22d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:485)
+	at SeleniumTest.com.delta.test.TestExecute.ExecuteJS(TestExecute.java:26)
+	at SeleniumTest.com.delta.test.TestExecute.testExeuteJS(TestExecute.java:12)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -45,11 +63,11 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.ArithmeticException -->
+          </exception> <!-- org.openqa.selenium.JavascriptException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-      </class> <!-- SeleniumTest.com.delta.test.Test1 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- testExeuteJS -->
+      </class> <!-- SeleniumTest.com.delta.test.TestExecute -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
